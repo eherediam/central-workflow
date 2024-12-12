@@ -9,9 +9,11 @@ on:
         required: true
       DISTRIBUTION:
         description: "java distribution"
+        type: string
         required: true
       CACHE:
         description: "java distribution"
+        type: string
         required: true           
 jobs:
   build:
