@@ -23,6 +23,6 @@ jobs:
     - name: Set up JDK 17
       uses: eherediam/central-workflow/java@main
       with:
-        java-version: ${{ inputs.JAVA_VERSION}}
-        distribution: ${{ inputs.DISTRIBUTION}}
-        cache: ${{ inputs.CACHE}}
+        JAVA_VERSION: ${{ inputs.JAVA_VERSION}}
+        DISTRIBUTION: ${{ inputs.DISTRIBUTION}}
+        CACHE: ${{ inputs.CACHE}}
