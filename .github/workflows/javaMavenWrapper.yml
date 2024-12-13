@@ -1,0 +1,27 @@
+name: "Java Maven"
+
+on:
+  workflow_call:
+    inputs:
+      JAVA_VERSION:
+        description: "java version"
+        type: string
+        required: true
+      DISTRIBUTION:
+        description: "java distribution"
+        type: string
+        required: true
+      CACHE:
+        description: "java cache"
+        type: string
+        required: true           
+jobs:
+  build:
+    
+    runs-on: ubuntu-latest
+    steps:
+      uses: /central-workflow/java@main
+      with:
+        java-version: ${{ inputs.JAVA_VERSION}}
+        distribution: ${{ inputs.DISTRIBUTION}}
+        cache: ${{ inputs.CACHE}}
