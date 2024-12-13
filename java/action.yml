@@ -3,18 +3,15 @@ name: "Java Maven"
 inputs:
   JAVA_VERSION:
     description: "java version"
-    type: string
     required: true
   DISTRIBUTION:
     description: "java distribution"
-    type: string
     required: true
   CACHE:
     description: "java cache"
-    type: string
     required: true          
 
-run:
+runs:
   using: 'composite'
   steps:
     - uses: actions/checkout@v4
