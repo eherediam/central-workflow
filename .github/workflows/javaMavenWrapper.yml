@@ -17,11 +17,8 @@ on:
         required: true           
 jobs:
   build:
-    
-    runs-on: ubuntu-latest
-    steps:
-      uses: /central-workflow/java@main
-      with:
-        java-version: ${{ inputs.JAVA_VERSION}}
-        distribution: ${{ inputs.DISTRIBUTION}}
-        cache: ${{ inputs.CACHE}}
+    uses: /central-workflow/java@main
+    with:
+      java-version: ${{ inputs.JAVA_VERSION}}
+      distribution: ${{ inputs.DISTRIBUTION}}
+      cache: ${{ inputs.CACHE}}
