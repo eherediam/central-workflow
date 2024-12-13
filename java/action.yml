@@ -1,24 +1,22 @@
 name: "Java Maven"
 
-on:
-  workflow_call:
-    inputs:
-      JAVA_VERSION:
-        description: "java version"
-        type: string
-        required: true
-      DISTRIBUTION:
-        description: "java distribution"
-        type: string
-        required: true
-      CACHE:
-        description: "java cache"
-        type: string
-        required: true           
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
+inputs:
+  JAVA_VERSION:
+    description: "java version"
+    type: string
+    required: true
+  DISTRIBUTION:
+    description: "java distribution"
+    type: string
+    required: true
+  CACHE:
+    description: "java cache"
+    type: string
+    required: true          
+
+run:
+  using: 'composite'
+  steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
       uses: actions/setup-java@v4

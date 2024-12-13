@@ -17,8 +17,12 @@ on:
         required: true           
 jobs:
   build:
-    uses: /central-workflow/java@main
-    with:
-      java-version: ${{ inputs.JAVA_VERSION}}
-      distribution: ${{ inputs.DISTRIBUTION}}
-      cache: ${{ inputs.CACHE}}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: /central-workflow/java@main
+      with:
+        java-version: ${{ inputs.JAVA_VERSION}}
+        distribution: ${{ inputs.DISTRIBUTION}}
+        cache: ${{ inputs.CACHE}}
