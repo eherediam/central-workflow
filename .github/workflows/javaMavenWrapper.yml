@@ -26,3 +26,6 @@ jobs:
         JAVA_VERSION: ${{ inputs.JAVA_VERSION}}
         DISTRIBUTION: ${{ inputs.DISTRIBUTION}}
         CACHE: ${{ inputs.CACHE}}
+    - name: markdonw summary
+      run: |
+        echo "### 📌 Resultado del Backend testing" >> $GITHUB_STEP_SUMMARY    
