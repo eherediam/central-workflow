@@ -1,7 +1,7 @@
-name: "Java Maven"
+name: "Java Mark"
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       JAVA_VERSION:
         description: "java version"
