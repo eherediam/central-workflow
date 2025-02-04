@@ -36,4 +36,5 @@ jobs:
 
     - name: markdonw summary
       run: |
+        echo "$HOME/.local/bin" >> "$GITHUB_PATH"
         echo "### 📌 Resultado del Backend testing" >> $GITHUB_STEP_SUMMARY   
